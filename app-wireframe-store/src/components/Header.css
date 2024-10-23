@@ -1,29 +1,29 @@
-header {
-    background-color: #0A0E27;
-    padding: 20px;
-}
-
-.navbar {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo {
-    color: white;
+    padding: 10px 20px;
+    background-color: #0c0f2a; /* Color de fondo oscuro */
+  }
+  
+  .logo h1 {
+    color: #fff; /* Color blanco para el texto del logo */
     font-size: 24px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-}
+    font-weight: bold;
+  }
+  
+  .login-btn button {
+    background-color: #00d4b1; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px; /* Hace que el botón sea redondeado */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-btn button:hover {
+    background-color: #00bfa1; /* Cambia ligeramente el color al pasar el cursor */
+  }
+  
