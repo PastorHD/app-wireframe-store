@@ -1,0 +1,45 @@
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    position: relative;
+  }
+  
+  .image-stack {
+    position: relative;
+    width: 600px;
+    height: 150px;
+  }
+  
+  .auto-slider-image {
+    position: absolute;
+    width: 200px; /* Tamaño de las imágenes */
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .active {
+    z-index: 3;
+    transform: scale(1.2) translateY(-20px); /* Imagen principal más grande y levantada */
+    left: 50%;
+    transform: translateX(-50%) scale(1.2); /* Centra la imagen */
+  }
+  
+  .previous {
+    z-index: 2;
+    left: 10%;
+    transform: scale(1) translateY(10px); /* Imagen a la izquierda con escala normal */
+    opacity: 0.8;
+  }
+  
+  .next {
+    z-index: 2;
+    right: 10%;
+    transform: scale(1) translateY(10px); /* Imagen a la derecha con escala normal */
+    opacity: 0.8;
+  }
+  

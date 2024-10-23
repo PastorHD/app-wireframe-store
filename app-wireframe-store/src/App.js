@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import EmpleoyeeSection from './components/EmpleoyeeSection';
 import ImageSlider from './components/ImageSlider';
 import ProductCatalog from './components/ProductCatalog';
+import AutoSlider from './components/AutoSlider';
 
 function App() {
 
@@ -54,6 +55,7 @@ function App() {
     <div>
       <Header />
       <Hero />
+      <AutoSlider />
       <Cards />
       <ImagesSection />
       <ProductCatalog products={productData} />
