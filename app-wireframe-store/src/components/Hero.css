@@ -1,0 +1,16 @@
+.hero {
+    background-color: #1f3144;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+button {
+    background-color: #01D3B8;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}

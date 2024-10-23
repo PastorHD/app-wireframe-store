@@ -1,0 +1,34 @@
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .image-slider {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .slider-image {
+    width: 150px;
+    height: 150px;
+    background-color: #00d4b1;
+    background-size: cover;
+    background-position: center;
+    transition: border 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .slider-image:hover {
+    border: 2px solid #007bff; /* Cambia el color del borde al pasar el cursor */
+  }
+  
+  .slider-text {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #22323f;
+  }
+  

@@ -1,0 +1,14 @@
+.images-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 50px;
+    text-align: center;
+}
+
+.image-item {
+    background-color: #01D3B8;
+    padding: 50px;
+    color: white;
+    border-radius: 10px;
+}

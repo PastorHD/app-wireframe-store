@@ -1,0 +1,38 @@
+.employee-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+    background-color: #fff; /* Fondo blanco */
+  }
+  
+  .employee-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .profile-circle {
+    width: 120px;
+    height: 120px;
+    background-color: #2e3c49; /* Color oscuro */
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .employee-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #22323f; /* Color del nombre */
+  }
+  
+  .employee-card p {
+    font-size: 16px;
+    color: #22323f; /* Color del puesto */
+  }
+  
+  .employee-card span {
+    font-size: 14px;
+    color: #00d4b1; /* Color del tiempo trabajado */
+  }
+  
