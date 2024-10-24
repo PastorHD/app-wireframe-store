@@ -9,6 +9,11 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Rutas
+
+// Prueba de Servidor
+app.get('/', (req, res) => {
+    res.send('Servidor funcionando');
+  });
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/users');
 
