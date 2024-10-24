@@ -1,8 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Cards from './components/Cards';
-import ImagesSection from './components/ImagesSection';
 import Footer from './components/Footer';
 import EmpleoyeeSection from './components/EmpleoyeeSection';
 import ImageSlider from './components/ImageSlider';
@@ -56,15 +54,13 @@ function App() {
       <Header />
       <Hero />
       <AutoSlider />
-      <Cards />
-      <ImagesSection />
       <ProductCatalog products={productData} />
       <ImageSlider images={imageData} />
       <EmpleoyeeSection employees={employees} />   
       <Footer />
     </div>
   );
-}
+} 
 
 
 

@@ -3,7 +3,7 @@ import './ProductCatalog.css';
 
 const ProductCatalog = ({ products }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 9;
+  const productsPerPage = 6;
 
   // Calcular el índice de los productos que se mostrarán en la página actual
   const indexOfLastProduct = currentPage * productsPerPage;
