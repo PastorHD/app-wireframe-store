@@ -7,8 +7,12 @@ const app = express();
 // Middlewares
 app.use(bodyParser.json());
 app.use(cors());
+app.use(express.json());
 
-// Rutas
+// Rutas de la API de productos
+const productRoutes = require('./routes/productsRoutes');
+app.use('/api/products', productRoutes); // Todas las rutas de productos estarán bajo /api/products
+
 
 // Prueba de Servidor
 app.get('/', (req, res) => {
@@ -17,8 +21,13 @@ app.get('/', (req, res) => {
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/users');
 
+// Rutas Usuarios
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
+
+// Rutas de la API de testimoniales
+const testimonialRoutes = require('./routes/testimonialRoutes');
+app.use('/api/testimonials', require('./routes/testimonialRoutes'));
 
 // Conexión a MongoDB
 mongoose.connect('mongodb://localhost:27017/mydatabase')

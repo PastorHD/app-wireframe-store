@@ -18,10 +18,18 @@
 }
 
 .product-image {
+  width: 100%; /* Cambiar a 100% para que ocupe el ancho del .product-card */
+  height: 200px; /* Mantener una proporción similar al contenedor */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image img {
   width: 100%;
-  height: 100px;
-  background-color: #2e3c49;
-  margin-bottom: 10px;
+  height: 100%;
+  object-fit: cover; /* Esto hará que las imágenes se ajusten sin deformarse */
   border-radius: 8px;
 }
 
