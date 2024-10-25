@@ -1,21 +1,23 @@
 .slider-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px; /* Ajusta la altura para que el contenedor tenga el espacio necesario */
+  margin-bottom: 20px; /* Añade espacio para separar el slider de otros elementos */
+  position: relative;
+  z-index: 1; /* Asegura que el slider esté en el flujo normal, pero por encima de otros si es necesario */
   }
   
   .image-stack {
     position: relative;
     width: 600px;
-    height: 150px;
+    height: 300px;
   }
   
   .auto-slider-image {
     position: absolute;
-    width: 200px; /* Tamaño de las imágenes */
-    height: 120px;
+    width: 700px; /* Tamaño de las imágenes */
+    height: 300px;
     background-size: cover;
     background-position: center;
     border-radius: 20px;
@@ -24,9 +26,8 @@
   
   .active {
     z-index: 3;
-    transform: scale(1.2) translateY(-20px); /* Imagen principal más grande y levantada */
     left: 50%;
-    transform: translateX(-50%) scale(1.2); /* Centra la imagen */
+    transform: translateX(-50%) scale(1.2); /* Centra y agranda la imagen activa */
   }
   
   .previous {

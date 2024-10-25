@@ -4,9 +4,9 @@ import './AutoSlider.css';
 const AutoSlider = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
-    'https://via.placeholder.com/300x150.png?text=Imagen+1',
-    'https://via.placeholder.com/300x150.png?text=Imagen+2',
-    'https://via.placeholder.com/300x150.png?text=Imagen+3'
+    'https://i.imgur.com/5XKGMAC.png',
+    'https://i.imgur.com/nwfF6bi.png',
+    'https://i.imgur.com/Su675xc.png'
   ];
 
   useEffect(() => {
