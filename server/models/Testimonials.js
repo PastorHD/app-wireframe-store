@@ -12,6 +12,10 @@ const testimonialSchema = new mongoose.Schema({
   description: {
     type: String,
     required: true
+  },
+  imageUrl: { // Nuevo campo para almacenar la URL de la imagen
+    type: String,
+    required: false
   }
 });
 

@@ -2,16 +2,22 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path');
 const app = express();
+
 
 // Middlewares
 app.use(bodyParser.json());
 app.use(cors());
-app.use(express.json());
+app.use(express.json());-
+
+// Servir la carpeta de uploads de manera estática
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 
 // Rutas de la API de productos
 const productRoutes = require('./routes/productsRoutes');
-app.use('/api/products', productRoutes); // Todas las rutas de productos estarán bajo /api/products
+app.use('/api/products', productRoutes);  // Todas las rutas de productos estarán bajo /api/products
 
 
 // Prueba de Servidor
