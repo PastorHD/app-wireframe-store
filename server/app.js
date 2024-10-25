@@ -14,6 +14,11 @@ app.use(express.json());-
 // Servir la carpeta de uploads de manera estática
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+// Conexión a MongoDB
+mongoose.connect('mongodb://localhost:27017/mydatabase')
+.then(() => console.log('MongoDB conectado'))
+.catch(err => console.log(err));
+
 
 // Rutas de la API de productos
 const productRoutes = require('./routes/productsRoutes');
@@ -32,13 +37,8 @@ app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 
 // Rutas de la API de testimoniales
-const testimonialRoutes = require('./routes/testimonialRoutes');
+const testimonialRoutes = require('./routes/testimonialRoutes');  
 app.use('/api/testimonials', require('./routes/testimonialRoutes'));
-
-// Conexión a MongoDB
-mongoose.connect('mongodb://localhost:27017/mydatabase')
-.then(() => console.log('MongoDB conectado'))
-.catch(err => console.log(err));
 
 // Puerto del servidor
 const PORT = process.env.PORT || 5000;

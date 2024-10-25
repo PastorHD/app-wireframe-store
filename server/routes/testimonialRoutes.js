@@ -28,26 +28,29 @@ router.get('/', async (req, res) => {
 
 // Crear un nuevo testimonial con imagen
 router.post('/', upload.single('image'), async (req, res) => {
-    // Verifica si todos los campos requeridos están presentes
+  try {
+    // Verifica que todos los campos requeridos estén presentes
     if (!req.body.name || !req.body.occupation || !req.body.description) {
       return res.status(400).json({ message: 'Todos los campos son obligatorios.' });
     }
-  
-    const imageUrl = req.file ? `/uploads/${req.file.filename}` : ''; // Si se subió una imagen, usar la URL
-  
+
+    // Si se subió una imagen, crea la URL de la imagen
+    const imageUrl = req.file ? `/uploads/${req.file.filename}` : '';
+
+    // Crear el nuevo testimonial en la base de datos
     const testimonial = new Testimonial({
       name: req.body.name,
       occupation: req.body.occupation,
       description: req.body.description,
-      imageUrl: imageUrl
+      imageUrl: imageUrl  // Guardar la URL de la imagen en la base de datos
     });
+
+    const newTestimonial = await testimonial.save();
+    res.status(201).json(newTestimonial); // Respuesta con el nuevo testimonial
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
   
-    try {
-      const newTestimonial = await testimonial.save();
-      res.status(201).json(newTestimonial);
-    } catch (err) {
-      res.status(400).json({ message: err.message });
-    }
   });   
 
 // Actualizar un testimonial existente
