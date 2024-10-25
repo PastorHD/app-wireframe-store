@@ -1,6 +1,8 @@
 .employee-section {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap; /* Permitir que las tarjetas se ajusten en varias filas si es necesario */
+  justify-content: center; /* Centramos las tarjetas en el contenedor */
+  gap: 20px; /* Controlar el espacio entre las tarjetas */
   padding: 40px 0;
   background-color: #fff;
 }
@@ -10,6 +12,8 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 200px; /* Establecer un ancho fijo para todas las tarjetas */
+  word-wrap: break-word; /* Asegurar que el texto largo haga saltos de línea */
 }
 
 .profile-circle {
@@ -19,12 +23,14 @@
   border-radius: 50%;
   margin-bottom: 15px;
   overflow: hidden; /* Asegura que la imagen se ajuste */
+  border: 3px solid #ccc; /* Agregamos un borde gris claro para diferenciarlo del fondo */
 }
 
 .profile-circle img {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ajusta la imagen al círculo */
+  
 }
 
 .employee-card h3 {
@@ -41,4 +47,5 @@
 .employee-card span {
   font-size: 14px;
   color: #00d4b1;
+  word-wrap: break-word;
 }
