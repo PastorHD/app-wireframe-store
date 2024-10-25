@@ -32,20 +32,20 @@ function App() {
 
   const imageData = [
     {
-      url: 'https://via.placeholder.com/150',
-      text: 'Hemos desarrollado un nuevo modelo',
+      url: 'https://i.imgur.com/Si5EQY2.png',
+      text: 'Nuevo modelo de inteligencia artificial desarrollado',
     },
     {
-      url: 'https://via.placeholder.com/150',
-      text: 'Nuestro producto es líder en el mercado',
+      url: 'https://i.imgur.com/K5VGpuJ.jpeg',
+      text: 'La inteligencia artificial llego para quedarse',
     },
     {
-      url: 'https://via.placeholder.com/150',
-      text: 'Innovación y tecnología de punta',
+      url: 'https://i.imgur.com/RsuzuYQ.png',
+      text: 'Soluciones digitales al alcance de tu mano',
     },
     {
-      url: 'https://via.placeholder.com/150',
-      text: 'Diseño y funcionalidad en armonía',
+      url: 'https://i.imgur.com/WC35sA9.jpeg',
+      text: 'Tecnología y futuro, 2 palabras que en conjunto combinan',
     },
   ];
 
