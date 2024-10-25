@@ -5,7 +5,7 @@ import './ProductCatalog.css';
 const ProductCatalog = () => {
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 6;
+  const productsPerPage = 1;
 
     // Obtener productos de la API
     useEffect(() => {
