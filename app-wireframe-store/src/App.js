@@ -24,11 +24,6 @@ function App() {
     // Agrega más productos simulados aquí
   ];
 
-  const employees = [
-    { name: 'John Doe', position: 'Software Engineer', timeWorked: '3 years' },
-    { name: 'Jane Smith', position: 'Project Manager', timeWorked: '5 years' },
-    { name: 'Emily Johnson', position: 'Designer', timeWorked: '2 years' }
-  ];
 
   const imageData = [
     {
@@ -56,7 +51,7 @@ function App() {
       <AutoSlider />
       <ProductCatalog products={productData} />
       <ImageSlider images={imageData} />
-      <EmpleoyeeSection employees={employees} />   
+      <EmpleoyeeSection/>   
       <Footer />
     </div>
   );
